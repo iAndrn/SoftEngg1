@@ -9,73 +9,82 @@
         tools:context=".MenuActivity">
 
 
+    <LinearLayout
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <LinearLayout
-            android:id="@+id/titlebar"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bottomborder"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintStart_toEndOf="parent">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
                 android:layout_gravity="center"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="parent"
-                android:background="@drawable/bottomborder">
-
-
-                <ImageView
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/puplogo" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="53dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="20dp"
-                    android:text="@string/titlebar"
-                    android:fontFamily="@font/montserrat"
-                    android:textColor="#000"
-                    android:textSize="35sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="parent" />
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/lookingfor"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/titlebar"
-            app:layout_constraintStart_toEndOf="@+id/titlebar"
-            app:layout_constraintTop_toBottomOf="@+id/titlebar">
+                android:background="@drawable/puplogo" />
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="53dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
-                android:text="@string/lookingfor"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/titlebar"
                 android:textColor="#000"
-                android:textSize="20sp"
-
-                />
-
+                android:textSize="35sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent" />
 
         </LinearLayout>
 
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lookingfor"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/titlebar"
+        app:layout_constraintStart_toEndOf="@+id/titlebar"
+        app:layout_constraintTop_toBottomOf="@+id/titlebar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:text="@string/lookingfor"
+            android:textColor="#000"
+            android:textSize="20sp"
+
+            />
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/maincontent"
@@ -87,49 +96,44 @@
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="@+id/lookingfor"
             app:layout_constraintStart_toEndOf="@+id/lookingfor"
-            app:layout_constraintTop_toBottomOf="@+id/lookingfor"
-            >
-
+            app:layout_constraintTop_toBottomOf="@+id/lookingfor">
 
 
             <LinearLayout
 
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="vertical"
-                android:background="@drawable/roundedcornerbutton"
-                android:padding="2dp"
                 android:layout_marginBottom="15dp"
-                >
+                android:background="@drawable/roundedcornerbutton"
+                android:orientation="vertical"
+                android:padding="2dp">
 
                 <Button
                     android:id="@+id/menuitem1"
-                    android:background="@drawable/fewa"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:src="@drawable/fewa"
-                    android:scaleType="centerCrop"
                     android:alpha="0.9"
+                    android:background="@drawable/fewa"
+                    android:fontFamily="@font/montserrat"
+                    android:onClick="fooditemClck"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/fewa"
                     android:text="Food"
                     android:textSize="50sp"
-                    android:fontFamily="@font/montserrat"
-                    android:textStyle="bold"
-                    android:onClick="fooditemClck"
-                    />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
 
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="vertical"
-                android:background="@drawable/roundedcornerbutton"
-                android:padding="2dp"
                 android:layout_marginBottom="15dp"
+                android:background="@drawable/roundedcornerbutton"
+                android:orientation="vertical"
+                android:padding="2dp"
                 app:layout_constraintEnd_toEndOf="@+id/menuitem1"
                 app:layout_constraintStart_toEndOf="@+id/menuitem1"
-                app:layout_constraintTop_toBottomOf="@+id/menuitem1"
-                >
+                app:layout_constraintTop_toBottomOf="@+id/menuitem1">
 
                 <Button
                     android:id="@+id/menuitem2"
@@ -138,107 +142,100 @@
                     android:alpha="0.9"
                     android:background="@drawable/intcafe"
                     android:fontFamily="@font/montserrat"
+                    android:onClick="computeritemClck"
                     android:scaleType="centerCrop"
                     android:src="@drawable/intcafe"
                     android:text="Internet Cafe and Printing Services"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
                     android:textColor="#000"
-                    android:onClick="computeritemClck"/>
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
 
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="vertical"
-                android:background="@drawable/roundedcornerbutton"
-                android:padding="2dp"
                 android:layout_marginBottom="15dp"
+                android:background="@drawable/roundedcornerbutton"
+                android:orientation="vertical"
+                android:padding="2dp"
                 app:layout_constraintEnd_toEndOf="@+id/menuitem2"
                 app:layout_constraintStart_toEndOf="@+id/menuitem2"
-                app:layout_constraintTop_toBottomOf="@+id/menuitem2"
-                >
+                app:layout_constraintTop_toBottomOf="@+id/menuitem2">
 
                 <Button
                     android:id="@+id/menuitem3"
-                    android:background="@drawable/schoolsupplies"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:src="@drawable/schoolsupplies"
-                    android:scaleType="centerCrop"
                     android:alpha="0.9"
+                    android:background="@drawable/schoolsupplies"
+                    android:fontFamily="@font/montserrat"
+                    android:onClick="suppliesitemClck"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/schoolsupplies"
                     android:text="School Supplies"
                     android:textSize="30sp"
-                    android:fontFamily="@font/montserrat"
-                    android:textStyle="bold"
-                    android:onClick="suppliesitemClck"
-                    />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
 
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="vertical"
-                android:background="@drawable/roundedcornerbutton"
-                android:padding="2dp"
                 android:layout_marginBottom="15dp"
+                android:background="@drawable/roundedcornerbutton"
+                android:orientation="vertical"
+                android:padding="2dp"
                 app:layout_constraintEnd_toEndOf="@+id/menuitem3"
                 app:layout_constraintStart_toEndOf="@+id/menuitem3"
-                app:layout_constraintTop_toBottomOf="@+id/menuitem3"
-                >
+                app:layout_constraintTop_toBottomOf="@+id/menuitem3">
 
                 <Button
                     android:id="@+id/menuitem4"
-                    android:background="@drawable/jeepney"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:src="@drawable/jeepney"
-                    android:scaleType="centerCrop"
                     android:alpha="0.9"
+                    android:background="@drawable/jeepney"
+                    android:fontFamily="@font/montserrat"
+                    android:onClick="transpoitemClck"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/jeepney"
                     android:text="Transportation"
                     android:textSize="30sp"
-                    android:fontFamily="@font/montserrat"
-                    android:textStyle="bold"
-                    android:onClick="transpoitemClck"
-                    />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
 
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="vertical"
-                android:background="@drawable/roundedcornerbutton"
-                android:padding="2dp"
                 android:layout_marginBottom="15dp"
+                android:background="@drawable/roundedcornerbutton"
+                android:orientation="vertical"
+                android:padding="2dp"
                 app:layout_constraintEnd_toEndOf="@+id/menuitem4"
                 app:layout_constraintStart_toEndOf="@+id/menuitem4"
-                app:layout_constraintTop_toBottomOf="@+id/menuitem4"
-                >
+                app:layout_constraintTop_toBottomOf="@+id/menuitem4">
 
                 <Button
                     android:id="@+id/menuitem5"
-                    android:background="@drawable/puppylon"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:scaleType="fitCenter"
                     android:alpha="0.9"
+                    android:background="@drawable/puppylon"
+                    android:fontFamily="@font/montserrat"
+                    android:onClick="landmarkitemClck"
+                    android:scaleType="fitCenter"
                     android:text="Landmarks"
                     android:textSize="30sp"
-                    android:fontFamily="@font/montserrat"
-                    android:textStyle="bold"
-                    android:onClick="landmarkitemClck"
-                    />
+                    android:textStyle="bold" />
             </LinearLayout>
-
 
 
         </LinearLayout>
 
 
-
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
