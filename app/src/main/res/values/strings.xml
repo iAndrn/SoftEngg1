@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PUPFinds</string>
+    <string name="titlebar">PUP Finds</string>
+    <string name="lookingfor">What are you looking for?</string>
+
+    <string name="pupfoods">PUP Foods</string>
+    <string name="pupcompshop">PUP Printing and \nInternet Services</string>
+    <string name="pupschoolsupp">PUP School \nSupplies</string>
+    <string name="puptranspo">PUP Transportation \nOptions</string>
+    <string name="puplandmarks">PUP Landmarks</string>
+</resources>

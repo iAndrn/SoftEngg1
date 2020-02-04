@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EBEBEB"
+        tools:context=".MenuActivity">
+
+
+        <LinearLayout
+            android:id="@+id/titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                android:background="@drawable/bottomborder">
+
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/puplogo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="53dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:text="@string/titlebar"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="#000"
+                    android:textSize="35sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="parent" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lookingfor"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/titlebar"
+            app:layout_constraintStart_toEndOf="@+id/titlebar"
+            app:layout_constraintTop_toBottomOf="@+id/titlebar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="@string/lookingfor"
+                android:textColor="#000"
+                android:textSize="20sp"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/maincontent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/lookingfor"
+            app:layout_constraintStart_toEndOf="@+id/lookingfor"
+            app:layout_constraintTop_toBottomOf="@+id/lookingfor"
+            >
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical"
+                android:background="@drawable/roundedcornerbutton"
+                android:padding="2dp"
+                android:layout_marginBottom="15dp"
+                >
+
+                <Button
+                    android:id="@+id/menuitem1"
+                    android:background="@drawable/fewa"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/fewa"
+                    android:scaleType="centerCrop"
+                    android:alpha="0.7"
+                    android:text="Food"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/montserrat"
+                    android:textStyle="bold"
+                    android:onClick="fooditemClck"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical"
+                android:background="@drawable/roundedcornerbutton"
+                android:padding="2dp"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/menuitem1"
+                app:layout_constraintStart_toEndOf="@+id/menuitem1"
+                app:layout_constraintTop_toBottomOf="@+id/menuitem1"
+                >
+
+                <Button
+                    android:id="@+id/menuitem2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/intcafe"
+                    android:fontFamily="@font/montserrat"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/intcafe"
+                    android:text="Internet Cafe and Printing Services"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:onClick="computeritemClck"/>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical"
+                android:background="@drawable/roundedcornerbutton"
+                android:padding="2dp"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/menuitem2"
+                app:layout_constraintStart_toEndOf="@+id/menuitem2"
+                app:layout_constraintTop_toBottomOf="@+id/menuitem2"
+                >
+
+                <Button
+                    android:id="@+id/menuitem3"
+                    android:background="@drawable/schoolsupplies"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/schoolsupplies"
+                    android:scaleType="centerCrop"
+                    android:alpha="0.7"
+                    android:text="School Supplies"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/montserrat"
+                    android:textStyle="bold"
+                    android:onClick="suppliesitemClck"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical"
+                android:background="@drawable/roundedcornerbutton"
+                android:padding="2dp"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/menuitem3"
+                app:layout_constraintStart_toEndOf="@+id/menuitem3"
+                app:layout_constraintTop_toBottomOf="@+id/menuitem3"
+                >
+
+                <Button
+                    android:id="@+id/menuitem4"
+                    android:background="@drawable/jeepney"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/jeepney"
+                    android:scaleType="centerCrop"
+                    android:alpha="0.7"
+                    android:text="Transportation"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/montserrat"
+                    android:textStyle="bold"
+                    android:onClick="transpoitemClck"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical"
+                android:background="@drawable/roundedcornerbutton"
+                android:padding="2dp"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/menuitem4"
+                app:layout_constraintStart_toEndOf="@+id/menuitem4"
+                app:layout_constraintTop_toBottomOf="@+id/menuitem4"
+                >
+
+                <Button
+                    android:id="@+id/menuitem5"
+                    android:background="@drawable/puppylon"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:scaleType="fitCenter"
+                    android:alpha="0.8"
+                    android:text="Landmarks"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/montserrat"
+                    android:textStyle="bold"
+                    android:onClick="landmarkitemClck"
+                    />
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
